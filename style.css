@@ -1,0 +1,228 @@
+:root {
+    --bg-primary : rgb(0, 82, 78);
+    --bg-secondary : wheat;
+    --text-primary : white;
+    --text-secondary : black;
+    
+}
+
+*, html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+    scroll-behavior: smooth;
+}
+
+.logo {
+    margin-right: auto;
+    display: flex;
+}
+
+.logo-img {
+    width: 35px;
+    height: 35px;
+    margin-left: 12px;
+}
+
+header {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-title {
+
+    cursor: pointer;
+    transition: all .5s ease 0s;
+}
+
+.logo:hover  {
+    color: var(--bg-secondary);
+    transform: rotate(4deg);
+}
+
+.btn-cta {
+    margin-right: 10px;
+    border: none;
+    font-size: 20px;
+    padding: 6px 12px;
+    background-color: var(--bg-secondary);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-cta:hover {
+    background-color: var(--bg-primary);
+    color: var(--bg-secondary);
+    transition: all .5s ease 0s;
+    transform: rotate(4deg);
+}
+
+.btn-cta2 {
+    margin-top: 12px;
+    margin-right: 10px;
+    border: none;
+    font-size: 20px;
+    padding: 6px 12px;
+    background-color: var(--bg-secondary);
+    color: var(--text-secondary);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-cta2:hover {
+    background-color: var(--bg-primary);
+    color: var(--bg-secondary);
+    transition: all .5s ease 0s;
+    transform: rotate(4deg);
+}
+
+nav ul {
+    display: flex;
+    padding: 20px;
+}
+
+li {
+    list-style-type: none;
+    padding: 10px;
+}
+
+li a {
+    display: inline-block;
+}
+
+li a:hover {
+    color: var(--bg-secondary);
+    transform: rotate(4deg);
+    transition: all .5s ease;
+}
+
+a {
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 70px 0;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.description {
+    font-size: 28px;
+    font-weight: bolder;
+}
+
+.img-foto {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    padding: 10px;
+}
+
+.parallax {
+    background-image: url('assets/foto/bg.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 95vh;
+}
+
+.tentang {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    padding: 40px;
+}
+
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.card-item {
+    text-align: center;
+    width: 25%;
+    background: #f7f7f7;
+    padding: 24px;
+    box-shadow: 2px 5px 5px 2px rgba(0, 0, 0, 0.5);
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.card-description {
+    font-size: 14px;
+    margin: 4px;
+}
+
+.icon {
+    display: inline;
+    width: 75px;
+    height: 75px;
+    margin: 10px;
+    padding: 4px;
+}
+
+
+
+@media screen and (max-width: 500px) {
+    .card {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .card-item {
+        width: 100%;
+        opacity: 0.8;
+    }
+    .container {
+        padding: 0;
+    }
+    .intro {
+        margin-top: 20px;
+    }
+    .img-foto {
+       padding: 0;
+    }
+    .parallax {
+        height: 108vh;
+    }
+    nav {
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        background-color: var(--bg-primary);
+        z-index: 9;
+    }
+    footer {
+        margin-bottom: 80px;
+    }
+}
